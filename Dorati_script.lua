@@ -158,7 +158,7 @@ local function Koumoku()
 end
 
 local function ShokiSettei()
-    if os.date("%Y%m%d%H%M") >= "202411302359" or _G.NN == "4.130.0" then
+    if os.date("%Y%m%d%H%M") >= "202411302359" or _G["NN"] ~= "4.130.0" then
         gg.alert("✔︎︎︎scriptの有効期限が切れています✔︎scriptが更新されるまでしばらくお待ちください")
         EXIT()
     end
