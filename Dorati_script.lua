@@ -1,4 +1,3 @@
-print(_G["NN"])
 function EditNametoStatus(Name,Tag,value)
     Status[Name][Tag] = value
     Status[Status[Name]["type"]][Status[Name]["Num"]][Tag] = value
