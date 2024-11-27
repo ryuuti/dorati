@@ -130,7 +130,7 @@ local function Koumoku()
                         ["N"] = {[1] = {["offset"] = "394191C", ["E"] = {[off] = "h 00 18 28 1E",[S_(1)] = "h 00 50 2A 1E ",[S_(2)] = "h 00 D0 28 1E ",[S_(3)] = "h 00 10 28 1E "}}}})
         i = AddStatus({["type"] = "B", ["Tag"] = "NoneB",["Num"] = i, ["Name"] = "ワンパン",
                         ["LD"] = {[1] = {["offset"] = "312DAF8", ["E"] = {[off] = "h C2 68 01 2A",[on] = "h C2 68 00 2A"}}},
-                        ["N"] = {[1] = {["offset"] = "3B25FBC", ["E"] = {[off] = "h 81 00 00 54",[on] = "h 80 00 00 54"}}}})
+                        ["N"] = {[1] = {["offset"] = "3B26E0C", ["E"] = {[off] = "h 81 00 00 54",[on] = "h 80 00 00 54"}}}})
         i = AddStatus({["type"] = "B", ["Tag"] = "NoneB",["Num"] = i, ["Name"] = "敵ターン無効",
                         ["LD"] = {[1] = {["offset"] = "330982C", ["E"] = {[off] = "h F0 B5 03 AF",[on] = "h 70 47 03 AF"}},
                                   [2] = {["offset"] = "3309A3C", ["E"] = {[off] = "h F0 B5 03 AF", [on] = "h 70 47 03 AF"}}},
