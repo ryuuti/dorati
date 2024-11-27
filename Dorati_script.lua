@@ -411,7 +411,6 @@ function tblchoice(str,tbl)
     else
         a, b, c= filter(choices)
         if b and c then
-        print("A")
         Button(b,c)
         end
     end
