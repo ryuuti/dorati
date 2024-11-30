@@ -1,6 +1,6 @@
 local function EditNametoStatus(n,v)
     Status[n].isEnabled=v
-    Status[Status[n]['type']][Status[n]['Num']].isEnabled=v
+    Status[Status[n].type][Status[n].Num].isEnabled=v
 end
 
 local function isim()
