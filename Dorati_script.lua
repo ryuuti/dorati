@@ -144,8 +144,8 @@ local function Koumoku()
 end
 
 local function ShokiSettei()
-    _G.NN = (_G.NN == 'MSDK' and '4.131.0') or (_G.NN or '4.131.0')
-    if os.date('%Y%m%d%H%M') >= '202411302359' or _G.NN ~= '4.131.0' then
+    _G.NN = _G.NN or '4.131.0'
+    if _G.NN ~= 'MSDK' and (os.date('%Y%m%d%H%M') >= '202411302359' or _G.NN ~= '4.131.0') then
         gg.alert('✔︎︎︎scriptの有効期限が切れています✔︎scriptが更新されるまでしばらくお待ちください')
         EXIT()
     end
@@ -324,6 +324,7 @@ end
 function Main()
     isMainActive = true
     FSQRT = -1
+    print(tostring(choicetbl))
     if tblchoice('製作者:ドラチ',choicetbl) ~= false then
         Uwagaki()
         Main()
