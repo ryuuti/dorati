@@ -294,7 +294,7 @@ function filerebort()
     if success then
         if not shoki then
             for _, value in pairs(Status.B) do
-                if value.isEnabled == on then
+                if value.isEnabled ~= off then
                 ButtonB(value.Name,value.isEnabled,true)
                 end
             end
