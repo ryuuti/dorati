@@ -4,8 +4,8 @@ local function EditNametoStatus(n,v)
 end
 
 local function isim()
-    local a=gg.getRangesList'libSGF'
-    if#a<=0 then a=gg.getRangesList'split_config.arm64_v8a.apk'end
+    local a=gg.getRangesList('libSGF')
+    if#a<=0 then a=gg.getRangesList('split_config.arm64_v8a.apk')end
     if#a>0 then return'0x'..string.format('%X',a[1].start)end
     return nil
 end
