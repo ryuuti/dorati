@@ -1,6 +1,6 @@
-local function EditNametoStatus(n,t,v)
-    Status[n][t]=v
-    Status[Status[n]['type']][Status[n]['Num']][t]=v
+local function EditNametoStatus(n,v)
+    Status[n].isEnabled=v
+    Status[Status[n]['type']][Status[n]['Num']].isEnabled=v
 end
 
 local function isim()
@@ -281,7 +281,7 @@ function filerebort()
             local key, value = string.match(line, '([^:]+):(.+)')
             if key and value and Status[key] then
                 if Status[key].isEnabled then
-                    EditNametoStatus(key,'isEnabled',value)
+                    EditNametoStatus(key,value)
                 else
                     Status[key] = value
                 end
@@ -460,7 +460,7 @@ function ButtonA(Name,isEnabled)
     for key, value in pairs(Status[Name].toggle) do
         ButtonB(key,value[isEnabled],true)
     end
-    EditNametoStatus(Name,'isEnabled',isEnabled)
+    EditNametoStatus(Name,isEnabled)
     gg.toast(Name .. isEnabled)
 end
 
@@ -472,7 +472,7 @@ function ButtonB(Name, isEnabled, data)
         for _, v in pairs(cache[type]) do
             setHexMemory(tonumber(v.offset,16), v.Value[isEnabled])
         end
-        EditNametoStatus(Name, 'isEnabled', isEnabled)
+        EditNametoStatus(Name,isEnabled)
         if not data then gg.toast(Name .. isEnabled) end
     else
         return gg.toast(Name .. 'は' .. type .. 'には対応していません')
