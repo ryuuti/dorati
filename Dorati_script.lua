@@ -324,7 +324,6 @@ end
 function Main()
     isMainActive = true
     FSQRT = -1
-    print(tostring(choicetbl))
     if tblchoice('製作者:ドラチ',choicetbl) ~= false then
         Uwagaki()
         Main()
