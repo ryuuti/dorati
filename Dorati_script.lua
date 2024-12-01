@@ -8,13 +8,11 @@ local function isim(c)
     if c == 'libSGF' then
         return'0x'..string.format('%X',a[1].start)
     else
-        local b
         for _, v in ipairs(a) do
             if v.state == "Xa" then
-                b = v.start
+                return '0x'..string.format('%X',v.start)
             end
         end
-        return '0x'..string.format('%X',b)
     end
 end
 
