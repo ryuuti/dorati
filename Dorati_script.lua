@@ -3,9 +3,9 @@ local function EditNametoStatus(n,v)
     Status[Status[n].type][Status[n].Num].isEnabled=v
 end
 
-local function isim(a)
-    local a=gg.getRangesList(a)
-    if a == 'libSGF' then
+local function isim(c)
+    local a=gg.getRangesList(c)
+    if c == 'libSGF' then
         return'0x'..string.format('%X',a[1].start)
     else
         local b
