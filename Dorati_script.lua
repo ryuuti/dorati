@@ -18,7 +18,6 @@ end
 
 local function setHexMemory(o, h)
     local a,b=Status.TYPE == 'UG' and isim('split_config.arm64_v8a.apk') or isim('libSGF'),0
-    print(a)
     local t={}
     for x in h:gmatch'%S%S'do
         t[#t+1]={address=a+o+b,flags=gg.TYPE_BYTE,value=x..'r'}
