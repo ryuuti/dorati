@@ -23,7 +23,7 @@ end
 
 local function Koumoku()
     local function AddStatus(args)
-        local value = {type = args.type,isEnabled = args.isEnabled or off, Num = args.Num, Name = args.Name , toggle = args.toggle or nil, N = args.N or nil, LD = args.LD or nil}
+        local value = {type = args.type,isEnabled = args.isEnabled or off, Num = args.Num, Name = args.Name , toggle = args.toggle or nil, NOX = args.NOX or nil, UG = args.UG or nil, LD = args.LD or nil}
         Status[args.Name] = value
         Status[args.type][args.Num] = value
         group[args.Tag] = group[args.Tag] or {}
@@ -451,8 +451,7 @@ function Button(type1, Name)
         if type1 == 'ButtonA' then
             return false
         end
-        print(Name)
-        for _, n in pairs(Status[Name].N) do
+        for _, n in pairs(Status[Name].NOX) do
             for key in pairs(n.Value) do
                 local index = tonumber(key:match('%[(%d+)%]'))
                 if index and tblcount <= index then
