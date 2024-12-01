@@ -97,8 +97,8 @@ local function Koumoku()
                                  {offset = '44A1E64',Value = {[off] = 'h FF 03 03 D1',[on]= 'h C0 03 5F D6'}}}})
         i = AddStatus({type = 'B', Tag = 'Mukou',Num = i, Name = '会話無効',
                         ['LD'] = {{offset = '38555D0',Value = {[off] = 'h F0 B5 03 AF',[on] = 'h 70 47 03 AF'}}},
-                        ['UG'] = {{offset = '12C8B7A8',  ['E'] = {[off] = 'h FF 83 01 D1 E8 23 00 FD',[on] = 'h C0 03 5F D6 C0 03 5F D6'}}},
-                        ['NOX'] = {{offset = '492B7A8',  ['E'] = {[off] = 'h FF 83 01 D1 E8 23 00 FD',[on] = 'h C0 03 5F D6 C0 03 5F D6'}}}})
+                        ['UG'] = {{offset = '12C8B7A8', Value = {[off] = 'h FF 83 01 D1 E8 23 00 FD',[on] = 'h C0 03 5F D6 C0 03 5F D6'}}},
+                        ['NOX'] = {{offset = '492B7A8', Value= {[off] = 'h FF 83 01 D1 E8 23 00 FD',[on] = 'h C0 03 5F D6 C0 03 5F D6'}}}})
         i = AddStatus({type = 'B', Tag = 'Mukou',Num = i, Name = '虫眼鏡無効',
                         ['LD'] = {{offset = '3636820',Value = {[off] = 'h F0 B5 03 AF',[on] = 'h 70 47 03 AF'}},
                                   {offset = '371DF0C',Value = {[off] = 'h F0 B5 03 AF',[on] = 'h 70 47 03 AF'}}},
