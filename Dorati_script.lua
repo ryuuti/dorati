@@ -18,6 +18,7 @@ end
 
 local function setHexMemory(o, h)
     local a,b=Status.TYPE == 'UG' and isim('split_config.arm64_v8a.apk') or isim('libSGF'),0
+    print(a)
     local t={}
     for x in h:gmatch'%S%S'do
         t[#t+1]={address=a+o+b,flags=gg.TYPE_BYTE,value=x..'r'}
@@ -72,9 +73,9 @@ local function Koumoku()
         Status.A = {}
         i = AddStatus({type = 'A', Tag = 'NoneA',Num = i, Name = 'おすすめ倍速遅延(UG)', toggle = {['倍速'] = {[on] = S_(2), [off] = off}, ['ぷに遅延'] = {[on] = S_(3), [off] = off}}})
         i = AddStatus({type = 'A', Tag = 'NoneA',Num = i, Name = 'おすすめ倍速遅延(PC)', toggle = {['倍速'] = {[on] = S_(3), [off] = off}, ['ぷに遅延'] = {[on] = S_(1), [off] = off}}})
-        i = AddStatus({type = 'A', Tag = 'NoneA',Num = i, Name = '完凸用', toggle = {['ワンパン'] = {[on] = on, [off] = off}, ['敵ターン無効'] = {[on] = on, [off] = off}, ['スコア'] = {[on] = on, [off] = off}, ['アイテム泥無効'] = {[on] = on, [off] = off}, ['妖怪泥無効'] = {[on] = off, [off] = on}, ['鍵演出スキップ'] = {[on] = on, [off] = off}, ['リザルトスキップ'] = {[on] = on, [off] = off}, ['フレンドアイコン無効'] = {[on] = on, [off] = off}, ['会話無効'] = {[on] = on, [off] = off}, ['虫眼鏡無効'] = {[on] = on, [off] = off}, ['封印無効'] = {[on] = on, [off] = off},['確泥(妖怪)'] = {[on] = on, [off] = off}, ['確泥エラー回避'] = {[on] = on, [off] = off}}})
+        --[[i = AddStatus({type = 'A', Tag = 'NoneA',Num = i, Name = '完凸用', toggle = {['ワンパン'] = {[on] = on, [off] = off}, ['敵ターン無効'] = {[on] = on, [off] = off}, ['スコア'] = {[on] = on, [off] = off}, ['アイテム泥無効'] = {[on] = on, [off] = off}, ['妖怪泥無効'] = {[on] = off, [off] = on}, ['鍵演出スキップ'] = {[on] = on, [off] = off}, ['リザルトスキップ'] = {[on] = on, [off] = off}, ['フレンドアイコン無効'] = {[on] = on, [off] = off}, ['会話無効'] = {[on] = on, [off] = off}, ['虫眼鏡無効'] = {[on] = on, [off] = off}, ['封印無効'] = {[on] = on, [off] = off},['確泥(妖怪)'] = {[on] = on, [off] = off}, ['確泥エラー回避'] = {[on] = on, [off] = off}}})]]
         --[[i = AddStatus({type = 'A', Tag = 'NoneA',Num = i, Name = 'Yポ周回用', toggle = {['ワンパン'] = {[on] = on, [off] = off}, ['敵ターン無効'] = {[on] = on, [off] = off}, ['スコア'] = {[on] = on, [off] = off}, ['妖怪泥無効'] = {[on] = on, [off] = off}, ['鍵演出スキップ'] = {[on] = on, [off] = off}, ['リザルトスキップ'] = {[on] = on, [off] = off}, ['フレンドアイコン無効'] = {[on] = on, [off] = off}, ['会話無効'] = {[on] = on, [off] = off}, ['虫眼鏡無効'] = {[on] = on, [off] = off}, ['封印無効'] = {[on] = on, [off] = off}, }})]]
-        i = AddStatus({type = 'A', Tag = 'NoneA',Num = i, Name = 'アイテム周回用', toggle = {['ワンパン'] = {[on] = on, [off] = off}, ['敵ターン無効'] = {[on] = on, [off] = off}, ['スコア'] = {[on] = on, [off] = off}, ['アイテム泥無効'] = {[on] = off, [off] = on}, ['妖怪泥無効'] = {[on] = on, [off] = off}, ['鍵演出スキップ'] = {[on] = on, [off] = off}, ['リザルトスキップ'] = {[on] = on, [off] = off}, ['フレンドアイコン無効'] = {[on] = on, [off] = off}, ['会話無効'] = {[on] = on, [off] = off}, ['虫眼鏡無効'] = {[on] = on, [off] = off}, ['封印無効'] = {[on] = on, [off] = off},}})
+        i = AddStatus({type = 'A', Tag = 'NoneA',Num = i, Name = '周回用', toggle = {['ワンパン'] = {[on] = on, [off] = off}, ['敵ターン無効'] = {[on] = on, [off] = off}, ['スコア'] = {[on] = on, [off] = off},['妖怪泥無効'] = {[on] = on, [off] = off}, ['鍵演出スキップ'] = {[on] = on, [off] = off}, ['リザルトスキップ'] = {[on] = on, [off] = off}, ['フレンドアイコン無効'] = {[on] = on, [off] = off}, ['会話無効'] = {[on] = on, [off] = off}, ['虫眼鏡無効'] = {[on] = on, [off] = off}, ['封印無効'] = {[on] = on, [off] = off},}})
         i = AddStatus({type = 'A', Tag = 'NoneA',Num = i, Name = '初期垢用スキップ', toggle = {['チュートリアルスキップ'] = {[on] = on, [off] = off},['スコアタ郵便イベ解放'] = {[on] = on, [off] = off}}})
     end
     if true then
